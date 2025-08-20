@@ -14,10 +14,16 @@ app.use(cookieParser());
 
 // routes import
 import userRouter from './routes/user.routes.js';
+import videoRouter from './routes/video.routes.js';
+import tweetRouter from './routes/tweets.routes.js';
+import commentRouter from './routes/comments.routes.js';
 
 
 // routes declaration
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/videos', videoRouter);
+app.use('/api/v1/tweets', tweetRouter);
+app.use('/api/v1/comments', commentRouter);
 
 
 export { app };
